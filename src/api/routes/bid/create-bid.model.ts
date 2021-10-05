@@ -9,6 +9,5 @@ export interface CreateBid {
         difference: number,
         amount: number,
         currency: string
-    },
-    user: string
+    }
 }

@@ -6,12 +6,15 @@ import { BidEntity } from "../persistence/entities/bid.entity";
 class BidService {
     constructor(private readonly bidModel: Model<BidEntity, {}, {}>) { }
 
-    public createBid(bid: CreateBid): Promise<BidEntity> {
+    public createBid(userId: string, bid: CreateBid): Promise<BidEntity> {
+        if(!userId) {
+            throw new Error('User not found.');
+        }
         return this.bidModel.create({...bid});
     }
 
-    public async getBids(): Promise<Bid[]> {
-        return await this.bidModel.find().lean();
+    public async getBids(user: string): Promise<Bid[]> {
+        return await this.bidModel.find({ user: user }).lean();
     }
 }
 

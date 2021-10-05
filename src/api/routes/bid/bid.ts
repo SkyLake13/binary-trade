@@ -10,7 +10,7 @@ bid.post('', async (req, res, next) => {
 
     const bidData = req.body as CreateBid;
 
-    const bid = await bidService.createBid(bidData);
+    const bid = await bidService.createBid(user.id, bidData);
 
     return res.status(200).send(bid);
 });
@@ -19,7 +19,7 @@ bid.post('', async (req, res, next) => {
 bid.get('', async (req, res, next) => {
     const user = (req as any).user;
 
-    const bids = await bidService.getBids();
+    const bids = await bidService.getBids(user.id);
 
     return res.status(200).send(bids);
 });
