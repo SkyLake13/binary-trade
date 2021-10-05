@@ -11,7 +11,7 @@ class BidService {
     }
 
     public async getBids(): Promise<Bid[]> {
-        return await this.bidModel.find();
+        return await this.bidModel.find().lean();
     }
 }
 

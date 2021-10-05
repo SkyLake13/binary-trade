@@ -2,17 +2,35 @@ import { Schema } from "mongoose";
 import { BidEntity } from "../entities/bid.entity";
 
 const bidSchema = new Schema<BidEntity>({
-    at: {
-        type: Date
-    },
     index: {
-        type: String
+        name: {
+            type: String
+        },
+        value: {
+            type: Number
+        }
     },
-    direction: {
-        type: String
+    bid: {
+        direction: {
+            type: String
+        },
+        difference: {
+            type: String
+        },
+        amount: {
+            type: Number
+        },
+        currency: {
+            type: String
+        },
     },
-    difference: {
-        type: String
+    time: {
+        client: {
+            type: Date
+        },
+        server: {
+            type: Date
+        }
     },
     user: {
         type: String

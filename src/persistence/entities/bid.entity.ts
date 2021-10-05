@@ -1,8 +1,18 @@
 export interface BidEntity {
-    at: Date,
-    index: string
-    direction: string,
-    difference: number,
+    index: {
+        name: string,
+        value: number,
+    },
+    bid: {
+        direction: string,
+        difference: number,
+        amount: number,
+        currency: string,
+    },
+    time: {
+        client: Date,
+        server: Date
+    },
     user: string
 }
 
