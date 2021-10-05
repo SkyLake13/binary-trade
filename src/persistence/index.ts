@@ -1,1 +1,2 @@
-export * from './models';
+export * from './db-connection';
+export * from './register-schemas';

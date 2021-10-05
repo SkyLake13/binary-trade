@@ -1,5 +1,5 @@
 {
-  "name": "express-ts-boilerplate",
+  "name": "binary-trade",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SkyLake13/express-ts-boilerplate"
+    "url": "git+https://github.com/SkyLake13/binary-trade"
   },
   "keywords": [
     "express",
@@ -23,11 +23,12 @@
   "author": "Skylake13",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SkyLake13/express-ts-boilerplate/issues"
+    "url": "https://github.com/SkyLake13/binary-trade/issues"
   },
-  "homepage": "https://github.com/SkyLake13/express-ts-boilerplate",
+  "homepage": "https://github.com/SkyLake13/binary-trade",
   "dependencies": {
     "amqplib": "^0.8.0",
+    "axios": "^0.22.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
